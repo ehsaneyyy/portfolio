@@ -30,8 +30,8 @@ body {
         /* Inner dark volume */
         inset 0 -8px 20px rgba(0, 0, 0, 0.45),
         /* RGB split – red left, blue right */
-        -3px 0 8px rgba(255, 0, 80, 0.25),
-        3px 0 8px rgba(0, 180, 255, 0.25),
+        -3px 0 8px rgba(255, 255, 255, 0.25),
+        3px 0 8px rgba(255, 255, 255, 0.25),
         /* Soft outer depth */
         0 8px 30px rgba(0, 0, 0, 0.3);
 
