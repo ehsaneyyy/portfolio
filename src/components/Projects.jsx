@@ -38,6 +38,7 @@ function Projects() {
                             description={project.description}
                             icon={project.icon}
                             tags={project.tags}
+                            link={project.link} 
                         />
                     ))}
                 </div>
