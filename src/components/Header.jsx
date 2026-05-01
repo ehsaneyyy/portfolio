@@ -7,12 +7,12 @@ function Header() {
     return (
         <header className="refractive-header fixed top-5 left-6 right-6 z-50 py-2 sm:left-12 sm:right-12">
             {/* This inner div is positioned relative so the glass streaks stay inside */}
-            <div className="relative max-w-6xl mx-auto flex justify-between items-center h-14 px-0">
+            <div className="relative max-w-6xl mx-auto flex justify-between items-center h-14 px-2 sm:px-0">
                 <div className="text-2xl font-bold text-white drop-shadow-lg">
                     Portfolio
                 </div>
 
-                <nav className="hidden md:flex space-x-8">
+                <nav className="hidden md:flex space-x-4 lg:space-x-8">
                     <a href="#home" className="nav-link">Home</a>
                     <a href="#projects" className="nav-link">Projects</a>
                     <a href="#skills" className="nav-link">Skills</a>
