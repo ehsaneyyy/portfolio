@@ -12,16 +12,16 @@ function Hero() {
                 </p>
 
                 <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                    Alex Smith
+                    M.Ehsan C
                 </h1>
 
                 <p className="text-xl text-white/80 mb-6">
-                    Web Developer & Designer
+                    Full-Stack Developer.
                 </p>
 
                 <p className="text-base text-white/70 max-w-xl mx-auto mb-8">
-                    I build clean, responsive websites using React and Tailwind CSS.
-                    I love turning ideas into real, working products.
+                    Designing and developing clean, responsive web experiences.<br />
+                    Simple code, real results – that’s what I do.
                 </p>
 
                 <div className="flex gap-4 justify-center">
