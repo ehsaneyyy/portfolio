@@ -7,7 +7,7 @@ function Projects() {
             description: "Real-time weather with clean UI",
             icon: "🌤️",
             tags: ["React", "API", "Tailwind"],
-            link: "https://portfolio-pink-seven-24.vercel.app/"
+            link: "https://black-and-white-toggle-button.vercel.app/"
         },
         {
             title: "Task Manager",
