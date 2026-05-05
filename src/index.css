@@ -13,32 +13,32 @@ body {
     flex-direction: column;
 }
 
-/* ---------- Refractive Optical Glass (No streak, pure depth) ---------- */
+
 .refractive-header {
-    /* Transparent glass base */
+    
     background: rgba(255, 255, 255, 0.04);
     backdrop-filter: blur(32px) saturate(180%);
     border-radius: 28px;
 
-    /* Subtle outline */
+    
     border: 1px solid rgba(255, 255, 255, 0.25);
 
-    /* Thickness illusion + chromatic aberration */
+
     box-shadow:
-        /* Inner top highlight */
+    
         inset 0 2px 8px rgba(255, 255, 255, 0.2),
-        /* Inner dark volume */
+    
         inset 0 -8px 20px rgba(0, 0, 0, 0.45),
-        /* RGB split – red left, blue right */
+    
         -3px 0 8px rgba(255, 255, 255, 0.25),
         3px 0 8px rgba(255, 255, 255, 0.25),
-        /* Soft outer depth */
+        
         0 8px 30px rgba(0, 0, 0, 0.3);
 
-    overflow: hidden;
+
 }
 
-/* Soft radial highlight (depth) */
+
 .refractive-header::before {
     content: "";
     position: absolute;
@@ -50,7 +50,7 @@ body {
     pointer-events: none;
 }
 
-/* Navigation links */
+
 .nav-link {
     color: rgba(255, 255, 255, 0.9);
     font-size: 1rem;
@@ -62,4 +62,75 @@ body {
 .nav-link:hover {
     color: #ffffff;
     text-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
+}
+
+
+.skill-marquee-viewport {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+    /* Fading top & bottom edges via mask */
+    -webkit-mask-image: linear-gradient(to bottom,
+            transparent 0%,
+            black 20%,
+            black 80%,
+            transparent 100%);
+    mask-image: linear-gradient(to bottom,
+            transparent 0%,
+            black 20%,
+            black 80%,
+            transparent 100%);
+}
+
+
+.skill-marquee-track {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    animation: scrollUp 12s linear infinite;
+    will-change: transform;
+}
+
+@keyframes scrollUp {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-50%);
+        /* moves half the total height (one full set) */
+    }
+}
+
+
+.skill-marquee-viewport:hover .skill-marquee-track {
+    animation-play-state: paused;
+}
+
+
+.glass-stack-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.glass-stack-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.3s ease-out;
 }
