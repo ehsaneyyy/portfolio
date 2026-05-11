@@ -1,12 +1,11 @@
 function Contact() {
     return (
         <section id="contact" className="relative min-h-125 py-20 px-4 overflow-hidden">
-    
-            <div className="absolute inset-0 z-0 pointer-events-none select-none  animate-soft-pulse">
+            <div className="absolute inset-0 z-0 pointer-events-none select-none animate-soft-pulse">
                 <img
                     src="/hand.png"
                     alt=""
-                    className="w-full h-full object-cover object-center opacity-100 blur-[0.5px]"
+                    className="w-full h-full object-cover object-center blur-[0.5px]"
                 />
             </div>
 
@@ -18,7 +17,7 @@ function Contact() {
                     Have a project in mind or just want to say hi?
                 </p>
 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center flex-wrap">
                     <a
                         href="mailto:alex@example.com"
                         className="px-6 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white font-medium hover:bg-white/20 transition inline-flex items-center justify-center gap-2"
@@ -40,6 +39,13 @@ function Contact() {
                         className="px-6 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white font-medium hover:bg-white/20 transition inline-flex items-center justify-center gap-2"
                     >
                         <span>💼</span> LinkedIn
+                    </a>
+                    <a
+                        href="/resume.pdf"
+                        download
+                        className="px-6 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white font-medium hover:bg-white/20 transition inline-flex items-center justify-center gap-2"
+                    >
+                        <span>📄</span> Download CV
                     </a>
                 </div>
             </div>
