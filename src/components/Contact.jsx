@@ -1,11 +1,20 @@
 function Contact() {
     return (
-        <section id="contact" className="py-20 px-4">
-            <div className="max-w-3xl mx-auto text-center">
+        <section id="contact" className="relative min-h-125 py-20 px-4 overflow-hidden">
+    
+            <div className="absolute inset-0 z-0 pointer-events-none select-none  animate-soft-pulse">
+                <img
+                    src="/hand.png"
+                    alt=""
+                    className="w-full h-full object-cover object-center opacity-100 blur-[0.5px]"
+                />
+            </div>
+
+            <div className="relative z-10 max-w-3xl mx-auto text-center">
                 <h2 className="text-4xl font-bold text-white mb-4">
                     Get In Touch
                 </h2>
-                <p className="text-lg text-white/70 mb-10">
+                <p className="text-base md:text-lg text-white/80 mb-10">
                     Have a project in mind or just want to say hi?
                 </p>
 

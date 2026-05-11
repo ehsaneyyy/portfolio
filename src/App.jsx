@@ -4,6 +4,7 @@ import Projects from './components/Projects'
 import Skills from './components/Skills'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import About from './components/About'
 import './index.css'
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
     <div className="flex flex-col min-h-screen bg-gray-900 overflow-x-hidden">
       <Header />
       <Hero />
+      <About /> 
       <Projects />
       <Skills />
       <Contact />

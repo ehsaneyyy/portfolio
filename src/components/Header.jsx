@@ -7,9 +7,13 @@ function Header() {
     return (
         <header className="refractive-header fixed top-4 left-4 right-4 z-50 py-2 sm:left-8 sm:right-8 lg:left-12 lg:right-12">
             <div className="relative max-w-6xl mx-auto flex justify-between items-center h-14 px-3 sm:px-4">
-                <div className="text-xl sm:text-2xl font-bold text-white drop-shadow-lg">
-                    Portfolio
-                </div>
+                <a
+                    href="#home"
+                    className="text-xl sm:text-2xl font-bold text-white drop-shadow-lg hover:text-purple-300 hover:drop-shadow-[0_0_12px_rgba(168,85,247,0.6)] transition-all duration-300"
+                    style={{ fontFamily: "'Unbounded', sans-serif" }}
+                >
+                    M.Ehsan C
+                </a>
 
                 <nav className="hidden md:flex space-x-4 lg:space-x-8">
                     <a href="#home" className="nav-link">Home</a>
@@ -18,7 +22,6 @@ function Header() {
                     <a href="#contact" className="nav-link">Contact</a>
                 </nav>
 
-                
                 <button
                     onClick={toggleMenu}
                     className="md:hidden relative w-10 h-10 flex items-center justify-center rounded-xl backdrop-blur-sm bg-white/10 border border-white/20 shadow-lg active:scale-95 transition-transform duration-200 focus:outline-none"
@@ -50,7 +53,6 @@ function Header() {
                     </svg>
                 </button>
             </div>
-
 
             {menuOpen && (
                 <nav className="md:hidden absolute left-0 right-0 top-full mt-3">

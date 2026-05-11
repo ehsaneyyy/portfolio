@@ -2,6 +2,10 @@
 
 html,
 body {
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    line-height: 1.6;
+    font-family: 'Unbounded', sans-serif;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -13,31 +17,18 @@ body {
     flex-direction: column;
 }
 
-
 .refractive-header {
-    
     background: rgba(255, 255, 255, 0.04);
     backdrop-filter: blur(32px) saturate(180%);
     border-radius: 28px;
-
-    
     border: 1px solid rgba(255, 255, 255, 0.25);
-
-
     box-shadow:
-    
         inset 0 2px 8px rgba(255, 255, 255, 0.2),
-    
         inset 0 -8px 20px rgba(0, 0, 0, 0.45),
-    
         -3px 0 8px rgba(255, 255, 255, 0.25),
         3px 0 8px rgba(255, 255, 255, 0.25),
-        
         0 8px 30px rgba(0, 0, 0, 0.3);
-
-
 }
-
 
 .refractive-header::before {
     content: "";
@@ -49,7 +40,6 @@ body {
     border-radius: inherit;
     pointer-events: none;
 }
-
 
 .nav-link {
     color: rgba(255, 255, 255, 0.9);
@@ -63,61 +53,6 @@ body {
     color: #ffffff;
     text-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
 }
-
-
-.skill-marquee-viewport {
-    position: relative;
-    height: 300px;
-    overflow: hidden;
-    /* Fading top & bottom edges via mask */
-    -webkit-mask-image: linear-gradient(to bottom,
-            transparent 0%,
-            black 20%,
-            black 80%,
-            transparent 100%);
-    mask-image: linear-gradient(to bottom,
-            transparent 0%,
-            black 20%,
-            black 80%,
-            transparent 100%);
-}
-
-
-.skill-marquee-track {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    animation: scrollUp 12s linear infinite;
-    will-change: transform;
-}
-
-@keyframes scrollUp {
-    0% {
-        transform: translateY(0);
-    }
-
-    100% {
-        transform: translateY(-50%);
-        /* moves half the total height (one full set) */
-    }
-}
-
-
-.skill-marquee-viewport:hover .skill-marquee-track {
-    animation-play-state: paused;
-}
-
-
-.glass-stack-card {
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.glass-stack-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
-}
-
 
 @keyframes fadeIn {
     from {
@@ -133,4 +68,71 @@ body {
 
 .animate-fade-in {
     animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes scrollLeft {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes scrollRight {
+    0% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.animate-scroll-left {
+    animation: scrollLeft 30s linear infinite;
+}
+
+.animate-scroll-right {
+    animation: scrollRight 30s linear infinite;
+}
+
+@keyframes softPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.25;
+    }
+
+    50% {
+        transform: scale(1.05);
+        opacity: 0.35;
+    }
+}
+
+.animate-soft-pulse {
+    animation: softPulse 8s ease-in-out infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.15;
+    }
+}
+
+.blinking-cursor {
+    animation: blink 1s step-end infinite;
+}
+
+.noise-texture {
+    background-image: radial-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+    background-size: 3px 3px;
 }
