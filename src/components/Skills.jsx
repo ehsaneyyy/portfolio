@@ -19,7 +19,7 @@ function Skills() {
     ]
 
     return (
-        <section id="skills" className="py-20 px-4 bg-[#070b1a]">
+        <section id="skills" className="py-20 px-4 bg-gray-900">
             <div className="max-w-7xl mx-auto">
                 <h2 className="text-4xl font-bold text-white text-center mb-12">My Skills</h2>
                 <div className="flex flex-col gap-6">
@@ -130,8 +130,8 @@ function Rail({ items, speed }) {
             onTouchStart={handleDown}
             onTouchMove={handleMove}
         >
-            <div className="absolute left-0 top-0 h-full w-32 bg-linear-to-r from-[#070b1a] via-[#070b1a]/80 to-transparent z-10 pointer-events-none" />
-            <div className="absolute right-0 top-0 h-full w-32 bg-linear-to-l from-[#070b1a] via-[#070b1a]/80 to-transparent z-10 pointer-events-none" />
+            <div className="absolute left-0 top-0 h-full w-32 bg-linear-to-r from-gray-900 via-gray-900/80 to-transparent z-10 pointer-events-none" />
+            <div className="absolute right-0 top-0 h-full w-32 bg-linear-to-l from-gray-900 via-gray-900/80 to-transparent z-10 pointer-events-none" />
 
             <div ref={trackRef} className="flex gap-4 will-change-transform">
                 {duplicated.map((skill, i) => (
