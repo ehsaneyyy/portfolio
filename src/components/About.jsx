@@ -1,10 +1,10 @@
 function About() {
     return (
         <section id="about" className="relative py-28 px-4 overflow-hidden">
-            <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-125 h-125 bg-purple-600/15 blur-[120px] rounded-full pointer-events-none" />
+        
 
             <div className="relative z-10 max-w-2xl mx-auto">
-                <div className="group relative border border-purple-500/20 bg-[#070b1a]/70 backdrop-blur-2xl rounded-2xl p-6 md:p-8 shadow-[0_0_40px_rgba(168,85,247,0.08)] hover:border-purple-400/30 hover:shadow-[0_0_50px_rgba(168,85,247,0.10)] transition-all duration-500 ease-out">
+                <div className="group relative border border-purple-500/20  bg-transparent backdrop-blur-2xl rounded-2xl p-6 md:p-8 shadow-[0_0_40px_rgba(168,85,247,0.08)] hover:border-purple-400/30 hover:shadow-[0_0_50px_rgba(168,85,247,0.10)] transition-all duration-500 ease-out">
                     <div className="absolute inset-0 rounded-2xl bg-linear-to-br from-purple-500/5 to-transparent pointer-events-none" />
                     <div className="absolute inset-px rounded-2xl border border-white/5 pointer-events-none" />
                     <div className="absolute inset-0 rounded-2xl noise-texture pointer-events-none" />
