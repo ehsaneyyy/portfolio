@@ -35,7 +35,7 @@ function Contact() {
                     </a>
 
                     <a
-                        href="https://github.com/yourusername"
+                        href="https://github.com/ehsaneyyy"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="group relative flex flex-col items-center gap-2"
@@ -53,7 +53,7 @@ function Contact() {
                     </a>
 
                     <a
-                        href="https://linkedin.com/in/yourusername"
+                        href="https://www.linkedin.com/in/mohammed-ehsan-85259a371/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="group relative flex flex-col items-center gap-2"
@@ -72,7 +72,8 @@ function Contact() {
 
                     <a
                         href="/resume.pdf"
-                        download
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="group relative flex flex-col items-center gap-2"
                     >
                         <div className="relative w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white transition-all duration-200 ease-out hover:bg-white/20 hover:border-purple-400/50 hover:shadow-[0_0_20px_rgba(168,85,247,0.3)] hover:-translate-y-1 transform-gpu will-change-transform"
