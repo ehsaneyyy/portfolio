@@ -19,9 +19,9 @@ function Skills() {
     ]
 
     return (
-        <section id="skills" className="py-20 px-4 bg-gray-900">
+        <section id="skills" className="py-24 px-4 bg-[#EFEAE3]">
             <div className="max-w-7xl mx-auto">
-                <h2 className="text-4xl font-bold text-white text-center mb-12">My Skills</h2>
+                <h2 className="text-4xl md:text-5xl font-bold text-black text-center mb-12 tracking-tight">My <span className="text-[#2563EB]">Skills</span></h2>
                 <div className="flex flex-col gap-6">
                     <Rail items={topRow} speed={-0.7} />
                     <Rail items={bottomRow} speed={0.7} />
@@ -130,14 +130,14 @@ function Rail({ items, speed }) {
             onTouchStart={handleDown}
             onTouchMove={handleMove}
         >
-            <div className="absolute left-0 top-0 h-full w-32 bg-linear-to-r from-gray-900 via-gray-900/80 to-transparent z-10 pointer-events-none" />
-            <div className="absolute right-0 top-0 h-full w-32 bg-linear-to-l from-gray-900 via-gray-900/80 to-transparent z-10 pointer-events-none" />
+            <div className="absolute left-0 top-0 h-full w-32 bg-linear-to-r from-[#EFEAE3] via-[#EFEAE3]/80 to-transparent z-10 pointer-events-none" />
+            <div className="absolute right-0 top-0 h-full w-32 bg-linear-to-l from-[#EFEAE3] via-[#EFEAE3]/80 to-transparent z-10 pointer-events-none" />
 
             <div ref={trackRef} className="flex gap-4 will-change-transform">
                 {duplicated.map((skill, i) => (
                     <span
                         key={i}
-                        className="px-6 py-3 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm text-white/80 whitespace-nowrap text-sm font-medium transition-all duration-300 hover:border-purple-400/50 hover:bg-white/10 hover:text-white hover:shadow-[0_0_20px_rgba(168,85,247,0.3)] cursor-grab active:cursor-grabbing flex items-center gap-2 shrink-0"
+                        className="px-6 py-3 rounded-full border border-black/15 bg-white text-black/80 whitespace-nowrap text-sm font-medium shadow-[0_1px_0_rgba(20,20,20,0.06),0_8px_16px_-12px_rgba(20,20,20,0.2)] transition-all duration-300 hover:border-[#B3261E]/40 hover:text-[#B3261E] hover:-translate-y-0.5 hover:shadow-[0_12px_24px_-12px_rgba(179,38,30,0.35)] cursor-grab active:cursor-grabbing flex items-center gap-2 shrink-0"
                     >
                         <span className="w-4 h-4">{skill.icon}</span>
                         <span>{skill.name}</span>

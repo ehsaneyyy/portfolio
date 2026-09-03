@@ -98,17 +98,19 @@ function Hero() {
     ].join(', ')
 
     return (
-        <section id="home" className="relative h-screen pt-24 overflow-hidden bg-gray-900">
+        <section id="home" className="relative h-screen pt-24 overflow-hidden bg-[#F7F4EF]">
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none z-0">
                 <h1
-                    className={`text-[8vw] md:text-[6vw] lg:text-[5vw] xl:text-[4.5vw] font-black uppercase whitespace-nowrap tracking-[-0.06em] text-slate-300 transition-opacity duration-700 ${isOverCharacter ? 'opacity-0' : 'opacity-100'
+                    className={`text-[8vw] md:text-[6vw] lg:text-[5vw] xl:text-[4.5vw] font-black uppercase whitespace-nowrap tracking-[-0.06em] text-[#141414]/90 transition-opacity duration-700 ${isOverCharacter ? 'opacity-0' : 'opacity-100'
                         }`}
+                    style={{ WebkitTextStroke: '1px rgba(20,20,20,0.25)', color: 'transparent' }}
                 >
                     PETER PARKER
                 </h1>
                 <h1
-                    className={`absolute text-[8vw] md:text-[6vw] lg:text-[5vw] xl:text-[4.5vw] font-black uppercase whitespace-nowrap tracking-[-0.06em] text-slate-300 transition-opacity duration-700 ${isOverCharacter ? 'opacity-100' : 'opacity-0'
+                    className={`absolute text-[8vw] md:text-[6vw] lg:text-[5vw] xl:text-[4.5vw] font-black uppercase whitespace-nowrap tracking-[-0.06em] text-[#141414]/90 transition-opacity duration-700 ${isOverCharacter ? 'opacity-100' : 'opacity-0'
                         }`}
+                    style={{ WebkitTextStroke: '1px rgba(20,20,20,0.25)', color: 'transparent' }}
                 >
                     SPIDERMAN
                 </h1>
@@ -142,7 +144,7 @@ function Hero() {
                 />
             </div>
 
-            <div className="absolute bottom-0 left-0 right-0 h-16 bg-linear-to-t from-gray-900 to-transparent pointer-events-none z-40" />
+            <div className="absolute bottom-0 left-0 right-0 h-16 bg-linear-to-t from-[#F7F4EF] to-transparent pointer-events-none z-40" />
 
             <div
                 ref={containerRef}

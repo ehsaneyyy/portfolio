@@ -21,9 +21,9 @@ function Footer() {
     ]
 
     return (
-        <footer className="py-8 px-4 border-t border-white/5">
+        <footer className="py-8 px-4 border-t border-black/10 bg-[#F7F4EF]">
             <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-                <p className="text-white/30 text-xs font-light">
+                <p className="text-black/45 text-xs font-light">
                     © {new Date().getFullYear()} M.Ehsan C. Built with care.
                 </p>
 
@@ -34,7 +34,7 @@ function Footer() {
                             href={social.href}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-white/30 hover:text-white/80 hover:-translate-y-0.5 active:scale-95 transition-all duration-200"
+                            className="text-black/40 hover:text-[#B3261E] hover:-translate-y-0.5 active:scale-95 transition-all duration-200"
                             aria-label={social.label}
                         >
                             {social.icon}
