@@ -71,14 +71,6 @@ function Hero() {
     const handleMouseEnter = () => setMouseInside(true)
     const handleMouseLeave = () => setMouseInside(false)
 
-    const isOverCharacter = (() => {
-        const rect = containerRef.current?.getBoundingClientRect()
-        if (!rect || pos.x < 0 || pos.y < 0) return false
-        const relX = pos.x / rect.width
-        const relY = pos.y / rect.height
-        return relX > 0.2 && relX < 0.8 && relY > 0.1 && relY < 0.9
-    })()
-
     const t = Date.now() / 1000
     const offset1 = { x: Math.sin(t * 1.7) * 25, y: Math.cos(t * 2.1) * 30 }
     const offset2 = { x: Math.cos(t * 2.3) * 20, y: Math.sin(t * 1.9) * 35 }
@@ -99,23 +91,6 @@ function Hero() {
 
     return (
         <section id="home" className="relative h-screen pt-24 overflow-hidden bg-[#F7F4EF]">
-            <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none z-0">
-                <h1
-                    className={`text-[8vw] md:text-[6vw] lg:text-[5vw] xl:text-[4.5vw] font-black uppercase whitespace-nowrap tracking-[-0.06em] text-[#141414]/90 transition-opacity duration-700 ${isOverCharacter ? 'opacity-0' : 'opacity-100'
-                        }`}
-                    style={{ WebkitTextStroke: '1px rgba(20,20,20,0.25)', color: 'transparent' }}
-                >
-                    PETER PARKER
-                </h1>
-                <h1
-                    className={`absolute text-[8vw] md:text-[6vw] lg:text-[5vw] xl:text-[4.5vw] font-black uppercase whitespace-nowrap tracking-[-0.06em] text-[#141414]/90 transition-opacity duration-700 ${isOverCharacter ? 'opacity-100' : 'opacity-0'
-                        }`}
-                    style={{ WebkitTextStroke: '1px rgba(20,20,20,0.25)', color: 'transparent' }}
-                >
-                    SPIDERMAN
-                </h1>
-            </div>
-
             <div
                 className="absolute top-24 left-0 right-0 bottom-0 overflow-hidden pointer-events-none z-10"
                 style={{

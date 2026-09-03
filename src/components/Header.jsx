@@ -23,7 +23,7 @@ function Header() {
             <div className="relative max-w-6xl mx-auto flex justify-between items-center h-14 px-3 sm:px-4">
                 <a
                     href="#home"
-                    className="text-xl sm:text-2xl font-bold text-black tracking-tight transition-colors duration-300"
+                    className="text-xl sm:text-2xl font-bold text-black tracking-tight transition-colors duration-300 hover:text-[#B3261E] hover:drop-shadow-[0_0_14px_rgba(179,38,30,0.55)]"
                     style={{ fontFamily: "'Unbounded', sans-serif" }}
                 >
                     M.Ehsan<span className="text-[#B3261E]"> C</span>

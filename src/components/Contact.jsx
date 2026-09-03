@@ -40,14 +40,6 @@ function Contact() {
 
     return (
         <section id="contact" className="relative min-h-125 py-24 px-4 overflow-x-hidden bg-[#F7F4EF]">
-            <div className="absolute inset-0 z-0 pointer-events-none select-none">
-                <img
-                    src="/hand.png"
-                    alt=""
-                    className="w-full h-full object-cover object-center opacity-20"
-                />
-            </div>
-
             <div className="relative z-10 max-w-2xl mx-auto text-center">
                 <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-black mb-4">
                     Get In <span className="text-[#B3261E]">Touch</span>
