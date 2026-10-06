@@ -10,6 +10,7 @@ function Hero() {
     const [mouseInside, setMouseInside] = useState(false)
 
     const [pos, setPos] = useState({ x: 0, y: 0 })
+    const [time, setTime] = useState(0)
 
     const baseRadius = 90
     const feather = 30
@@ -52,6 +53,7 @@ function Hero() {
             currentRef.current.x += (targetRef.current.x - currentRef.current.x) * 0.07
             currentRef.current.y += (targetRef.current.y - currentRef.current.y) * 0.07
             setPos({ x: currentRef.current.x, y: currentRef.current.y })
+            setTime(Date.now() / 1000)
 
             rafRef.current = requestAnimationFrame(animate)
         }
@@ -71,7 +73,7 @@ function Hero() {
     const handleMouseEnter = () => setMouseInside(true)
     const handleMouseLeave = () => setMouseInside(false)
 
-    const t = Date.now() / 1000
+    const t = time
     const offset1 = { x: Math.sin(t * 1.7) * 25, y: Math.cos(t * 2.1) * 30 }
     const offset2 = { x: Math.cos(t * 2.3) * 20, y: Math.sin(t * 1.9) * 35 }
     const r1 = baseRadius + Math.sin(t * 2.5) * 15

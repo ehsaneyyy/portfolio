@@ -84,7 +84,7 @@ function Rail({ items, speed }) {
             window.removeEventListener('resize', measure)
             cancelAnimationFrame(rafRef.current)
         }
-    }, [speed, paused])
+    }, [speed, paused, items.length])
 
     useEffect(() => {
         const handleUp = () => {
