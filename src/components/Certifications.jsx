@@ -6,7 +6,7 @@ function Certifications() {
             issueDate: "Oct 2026",
             id: null,
             verifyUrl: "https://www.credly.com/badges/87b32e32-15ef-424b-ab67-5b506634310e/public_url",
-            pdfPath: "/assets/certs/aws-educate-getting-started-with-compute-training-b.png",
+            pdfPath: "/assets/certs/aws-educate-getting-started-with-compute-training.png",
             icon: <AwsIcon />,
         },
         {
@@ -15,7 +15,7 @@ function Certifications() {
             issueDate: "Oct 2026",
             id: "MDBr6qfkbiwre",
             verifyUrl: "https://learn.mongodb.com/c/nB-K6hQ5RDaWUMA85NGYxA",
-            pdfPath: "/assets/certs/mongodb crud operations in python.pdf",
+            pdfPath: "/assets/certs/mongodb_crud_operations_in_python.pdf",
             icon: <MongoDbIcon />,
         },
         {
@@ -24,7 +24,7 @@ function Certifications() {
             issueDate: "Oct 2026",
             id: "PLAN-8749C02A78EC",
             verifyUrl: "https://www.credly.com/badges/e2f488cc-ae60-4b84-ae59-202272480763/public_url",
-            pdfPath: "/assets/certs/web_development_fundamentals certificate.pdf",
+            pdfPath: "/assets/certs/web_development_fundamentals_certificate.pdf",
             icon: <IbmIcon />,
         },
         {
@@ -42,7 +42,7 @@ function Certifications() {
             issueDate: "Oct 2026",
             id: "DC2B50754DBF",
             verifyUrl: "https://www.hackerrank.com/certificates/DC2B50754DBF",
-            pdfPath: "/assets/certs/rest_api_intermediate certificate.pdf",
+            pdfPath: "/assets/certs/rest_api_intermediate_certificate.pdf",
             icon: <HackerRankIcon />,
         },
         {
@@ -51,7 +51,7 @@ function Certifications() {
             issueDate: "Oct 2026",
             id: "C10163EE1B45",
             verifyUrl: "https://www.hackerrank.com/certificates/C10163EE1B45",
-            pdfPath: "/assets/certs/css certificate.pdf",
+            pdfPath: "/assets/certs/css_certificate.pdf",
             icon: <HackerRankIcon />,
         },
         {
@@ -60,7 +60,7 @@ function Certifications() {
             issueDate: "Sep 2026",
             id: "F9761E9B36B8",
             verifyUrl: "https://www.hackerrank.com/certificates/F9761E9B36B8",
-            pdfPath: "/assets/certs/javascript_intermediate certificate.pdf",
+            pdfPath: "/assets/certs/javascript_intermediate_certificate.pdf",
             icon: <HackerRankIcon />,
         },
         {
@@ -124,7 +124,9 @@ function CertificationCard({ cert }) {
                 </a>
                 <a
                     href={cert.pdfPath}
-                    download
+                    download={cert.name.toLowerCase().replace(/\s+/g, '-')}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-sm text-black/40 hover:text-[#B3261E] transition-colors duration-300"
                 >
                     Download &darr;
