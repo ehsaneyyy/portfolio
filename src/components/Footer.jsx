@@ -34,7 +34,7 @@ function Footer() {
                             href={social.href}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-black/40 hover:text-[#B3261E] hover:-translate-y-0.5 active:scale-95 transition-all duration-200"
+                            className="inline-flex h-10 w-10 items-center justify-center text-black/40 transition-all duration-200 hover:-translate-y-0.5 hover:text-[#B3261E] active:scale-95"
                             aria-label={social.label}
                         >
                             {social.icon}

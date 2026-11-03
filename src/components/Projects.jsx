@@ -57,13 +57,13 @@ function Projects() {
     )
 
     return (
-        <section id="projects" className="py-24 px-4">
+        <section id="projects" className="px-4 py-16 sm:px-6 sm:py-24">
             <div className="max-w-7xl mx-auto">
-                <h2 className="text-4xl md:text-5xl font-bold text-black text-center mb-16 tracking-tight">
+                <h2 className="mb-10 text-balance text-center text-[clamp(1.75rem,9.5vw,3rem)] font-bold tracking-tight text-black sm:mb-16">
                     My <span className="text-[#B3261E]">Projects</span>
                 </h2>
 
-                <div className="flex flex-col gap-24">
+                <div className="flex flex-col gap-16 md:gap-24">
                     {projectList.map((project, index) => {
                         return (
                             <div key={index} ref={refs[index]}>
@@ -73,7 +73,7 @@ function Projects() {
                                             }`}
                                     />
 
-                                    <div className="relative z-10 w-full md:w-1/2 py-8 flex flex-col md:items-start">
+                                    <div className="relative z-10 flex w-full flex-col py-4 md:w-1/2 md:items-start md:py-8">
                                         <p className="text-sm uppercase tracking-[0.2em] text-black/45 mb-3">
                                             {project.label}
                                         </p>
@@ -111,7 +111,7 @@ function Projects() {
                                             href={project.link}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="group/preview relative z-10 w-full md:w-1/2 h-80 md:h-85 rounded-2xl overflow-hidden border border-black/10 bg-white shadow-[0_1px_0_rgba(20,20,20,0.08),0_20px_40px_-24px_rgba(20,20,20,0.18)] hover:shadow-[0_30px_60px_-24px_rgba(20,20,20,0.28)] transition-all duration-500 flex items-center justify-center"
+                                            className="group/preview relative z-10 flex h-64 w-full items-center justify-center overflow-hidden rounded-2xl border border-black/10 bg-white shadow-[0_1px_0_rgba(20,20,20,0.08),0_20px_40px_-24px_rgba(20,20,20,0.18)] transition-all duration-500 hover:shadow-[0_30px_60px_-24px_rgba(20,20,20,0.28)] sm:h-80 md:h-85 md:w-1/2"
                                         >
                                             <div className={`absolute -inset-4 blur-3xl scale-90 pointer-events-none ${project.accent === 'red' ? 'bg-[#B3261E]/10' : 'bg-[#2563EB]/10'
                                                 }`} />
@@ -134,7 +134,7 @@ function Projects() {
                                             </div>
                                         </a>
                                     ) : (
-                                        <div className="relative z-10 w-full md:w-1/2 h-80 md:h-85 rounded-2xl overflow-hidden border border-black/10 bg-white shadow-[0_1px_0_rgba(20,20,20,0.08),0_20px_40px_-24px_rgba(20,20,20,0.18)] transition-all duration-500 flex items-center justify-center">
+                                        <div className="relative z-10 h-64 w-full overflow-hidden rounded-2xl border border-black/10 bg-white shadow-[0_1px_0_rgba(20,20,20,0.08),0_20px_40px_-24px_rgba(20,20,20,0.18)] transition-all duration-500 sm:h-80 md:h-85 md:w-1/2 flex items-center justify-center">
                                             <div className={`absolute -inset-4 blur-3xl scale-90 pointer-events-none ${project.accent === 'red' ? 'bg-[#B3261E]/10' : 'bg-[#2563EB]/10'
                                                 }`} />
                                             {project.image ? (

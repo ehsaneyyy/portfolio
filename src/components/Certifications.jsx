@@ -84,9 +84,9 @@ function Certifications() {
     ]
 
     return (
-        <section id="certifications" className="py-24 px-4 bg-[#F7F4EF]">
+        <section id="certifications" className="bg-[#F7F4EF] px-4 py-16 sm:px-6 sm:py-24">
             <div className="max-w-7xl mx-auto">
-                <h2 className="text-4xl md:text-5xl font-bold text-black text-center mb-12 tracking-tight">
+                <h2 className="mb-8 text-balance text-center text-[clamp(1.75rem,9.5vw,3rem)] font-bold tracking-tight text-black sm:mb-12">
                     My <span className="text-[#2563EB]">Certifications</span>
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -101,7 +101,7 @@ function Certifications() {
 
 function CertificationCard({ cert }) {
     return (
-        <div className="group flex flex-col bg-white rounded-xl border border-black/15 p-6 shadow-[0_1px_0_rgba(20,20,20,0.06),0_8px_16px_-12px_rgba(20,20,20,0.2)] transition-all duration-300 hover:border-[#B3261E]/40 hover:-translate-y-1 hover:shadow-[0_12px_24px_-12px_rgba(179,38,30,0.35)]">
+        <div className="group flex flex-col rounded-xl border border-black/15 bg-white p-5 shadow-[0_1px_0_rgba(20,20,20,0.06),0_8px_16px_-12px_rgba(20,20,20,0.2)] transition-all duration-300 hover:-translate-y-1 hover:border-[#B3261E]/40 hover:shadow-[0_12px_24px_-12px_rgba(179,38,30,0.35)] sm:p-6">
             <div className="flex items-start gap-3">
                 <span className="w-6 h-6 shrink-0 text-black/70 group-hover:text-[#B3261E] transition-colors duration-300">
                     {cert.icon}
@@ -112,7 +112,7 @@ function CertificationCard({ cert }) {
                 {cert.issuer} &middot; {cert.issueDate}
             </p>
             {cert.id && <p className="text-xs text-black/40 mt-1 break-all">ID: {cert.id}</p>}
-            <div className="mt-auto pt-5 border-t border-black/10 flex items-center justify-between gap-3">
+            <div className="mt-auto flex flex-wrap items-center justify-between gap-x-3 gap-y-2 border-t border-black/10 pt-4 sm:pt-5">
                 <a
                     href={cert.verifyUrl}
                     target={cert.verifyUrl !== "#" ? "_blank" : undefined}

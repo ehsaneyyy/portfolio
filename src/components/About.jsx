@@ -14,8 +14,9 @@ function About() {
                         <div className="w-3 h-3 rounded-full bg-[#B3261E]/70" />
                         <div className="w-3 h-3 rounded-full bg-[#E2B93B]/70" />
                         <div className="w-3 h-3 rounded-full bg-[#2563EB]/70" />
-                        <span className="ml-3 text-xs text-black/45 font-mono tracking-wider">
-                            PS v10.0.22631 | user: ehsan
+                        <span className="ml-2 truncate font-mono text-[10px] tracking-wide text-black/60 sm:ml-3 sm:text-xs sm:tracking-wider">
+                            PS v10.0.22631
+                            <span className="hidden sm:inline"> | user: ehsan</span>
                         </span>
                     </div>
 

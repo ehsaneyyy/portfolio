@@ -1,8 +1,8 @@
 function Hero() {
     return (
-        <section id="home" aria-labelledby="hero-title" className="relative min-h-svh overflow-hidden bg-[#F7F4EF] px-4 pt-28 pb-16 sm:px-6 sm:pt-32">
-            <div className="relative z-20 mx-auto w-full max-w-6xl text-center lg:text-left">
-                <div className="max-w-xl">
+        <section id="home" aria-labelledby="hero-title" className="hero-section relative min-h-svh overflow-hidden bg-[#F7F4EF] px-4 pt-28 pb-16 sm:px-6 sm:pt-32">
+            <div className="hero-copy relative z-20 mx-auto w-full max-w-6xl text-center lg:text-left">
+                <div className="hero-copy-inner max-w-xl">
                     <p
                         className="text-xs font-medium uppercase tracking-[0.2em] text-[#B3261E] sm:text-sm"
                         style={{ fontFamily: "'JetBrains Mono', monospace" }}
@@ -10,7 +10,7 @@ function Hero() {
                         Junior Python Full-Stack Developer
                     </p>
 
-                    <h1 id="hero-title" className="mt-4 text-5xl font-bold tracking-tight text-black sm:text-6xl lg:text-7xl">
+                    <h1 id="hero-title" className="hero-title mt-4 text-balance text-[clamp(2rem,11.5vw,3rem)] font-bold tracking-tight text-black sm:text-6xl lg:text-7xl">
                         Mohammed <span className="text-[#B3261E]">Ehsan</span>
                     </h1>
 
@@ -40,7 +40,7 @@ function Hero() {
             </div>
 
             <div
-                className="relative mt-12 -ml-4 w-[calc(100%+2rem)] mix-blend-multiply sm:-ml-6 sm:w-[calc(100%+3rem)] lg:absolute lg:top-0 lg:right-0 lg:mt-0 lg:ml-0 lg:h-full lg:w-[58vw]"
+                className="hero-image relative mt-8 -ml-4 w-[calc(100%+2rem)] mix-blend-multiply sm:-ml-6 sm:mt-12 sm:w-[calc(100%+3rem)] lg:absolute lg:top-0 lg:right-0 lg:mt-0 lg:ml-0 lg:h-full lg:w-[58vw]"
                 style={{
                     maskImage: 'linear-gradient(to bottom, black 0%, black 88%, transparent 100%)',
                     WebkitMaskImage: 'linear-gradient(to bottom, black 0%, black 88%, transparent 100%)',
@@ -62,7 +62,7 @@ function Hero() {
                         loading="eager"
                         fetchPriority="high"
                         decoding="async"
-                        className="h-auto w-full object-contain object-bottom lg:h-full lg:object-cover lg:object-[center_32%]"
+                        className="hero-image-img h-auto w-full object-contain object-bottom lg:h-full lg:object-cover lg:object-[center_32%]"
                     />
                 </picture>
             </div>

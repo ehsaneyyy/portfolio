@@ -39,16 +39,16 @@ function Contact() {
     ]
 
     return (
-        <section id="contact" className="relative min-h-125 py-24 px-4 overflow-x-hidden bg-[#F7F4EF]">
+        <section id="contact" className="relative min-h-100 overflow-x-hidden bg-[#F7F4EF] px-4 py-16 sm:min-h-125 sm:px-6 sm:py-24">
             <div className="relative z-10 max-w-2xl mx-auto text-center">
-                <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-black mb-4">
+                <h2 className="mb-4 text-balance text-[clamp(1.75rem,9.5vw,3rem)] font-bold tracking-tight text-black">
                     Get In <span className="text-[#B3261E]">Touch</span>
                 </h2>
-                <p className="text-black/60 max-w-md mx-auto leading-relaxed mb-12">
+                <p className="mx-auto mb-8 max-w-md leading-relaxed text-black/60 sm:mb-12">
                     Have a project in mind or just want to say hi?
                 </p>
 
-                <div className="flex justify-center gap-5 flex-wrap">
+                <div className="flex flex-wrap justify-center gap-3 sm:gap-5">
                     {items.map((item) => (
                         <a
                             key={item.label}
@@ -57,7 +57,7 @@ function Contact() {
                             rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                             className="group relative flex flex-col items-center gap-2"
                         >
-                            <div className="relative w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center rounded-full bg-white text-black border border-black/15 shadow-[0_1px_0_rgba(20,20,20,0.06),0_12px_24px_-12px_rgba(20,20,20,0.2)] transition-all duration-200 ease-out hover:-translate-y-1.5 hover:border-[#B3261E]/40 hover:text-[#B3261E] hover:shadow-[0_16px_28px_-12px_rgba(179,38,30,0.35)] transform-gpu will-change-transform">
+                            <div className="relative flex h-12 w-12 transform-gpu items-center justify-center rounded-full border border-black/15 bg-white text-black shadow-[0_1px_0_rgba(20,20,20,0.06),0_12px_24px_-12px_rgba(20,20,20,0.2)] transition-all duration-200 ease-out will-change-transform hover:-translate-y-1.5 hover:border-[#B3261E]/40 hover:text-[#B3261E] hover:shadow-[0_16px_28px_-12px_rgba(179,38,30,0.35)] sm:h-16 sm:w-16">
                                 {item.icon}
                             </div>
                             <span className="absolute top-full left-1/2 -translate-x-1/2 mt-1 text-xs text-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-150 whitespace-nowrap">

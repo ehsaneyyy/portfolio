@@ -19,9 +19,9 @@ function Skills() {
     ]
 
     return (
-        <section id="skills" className="py-24 px-4 bg-[#F7F4EF]">
+        <section id="skills" className="bg-[#F7F4EF] px-4 py-16 sm:px-6 sm:py-24">
             <div className="max-w-7xl mx-auto">
-                <h2 className="text-4xl md:text-5xl font-bold text-black text-center mb-12 tracking-tight">My <span className="text-[#2563EB]">Skills</span></h2>
+                <h2 className="mb-8 text-balance text-center text-[clamp(1.75rem,9.5vw,3rem)] font-bold tracking-tight text-black sm:mb-12">My <span className="text-[#2563EB]">Skills</span></h2>
                 <div className="flex flex-col gap-6">
                     <Rail items={topRow} speed={-0.7} />
                     <Rail items={bottomRow} speed={0.7} />
@@ -122,7 +122,7 @@ function Rail({ items, speed }) {
 
     return (
         <div
-            className="relative overflow-hidden select-none"
+            className="relative select-none overflow-hidden touch-pan-y"
             onMouseEnter={() => setPaused(true)}
             onMouseLeave={() => { setPaused(false); isDragging.current = false }}
             onMouseDown={handleDown}
@@ -130,8 +130,8 @@ function Rail({ items, speed }) {
             onTouchStart={handleDown}
             onTouchMove={handleMove}
         >
-            <div className="absolute left-0 top-0 h-full w-32 bg-linear-to-r from-[#F7F4EF] via-[#F7F4EF]/80 to-transparent z-10 pointer-events-none" />
-            <div className="absolute right-0 top-0 h-full w-32 bg-linear-to-l from-[#F7F4EF] via-[#F7F4EF]/80 to-transparent z-10 pointer-events-none" />
+            <div className="pointer-events-none absolute top-0 left-0 z-10 h-full w-12 bg-linear-to-r from-[#F7F4EF] via-[#F7F4EF]/80 to-transparent sm:w-24 lg:w-32" />
+            <div className="pointer-events-none absolute top-0 right-0 z-10 h-full w-12 bg-linear-to-l from-[#F7F4EF] via-[#F7F4EF]/80 to-transparent sm:w-24 lg:w-32" />
 
             <div ref={trackRef} className="flex gap-4 will-change-transform">
                 {duplicated.map((skill, i) => (

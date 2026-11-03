@@ -37,8 +37,10 @@ function Header() {
 
                 <button
                     onClick={toggleMenu}
-                    className="md:hidden relative w-10 h-10 flex items-center justify-center rounded-xl bg-black/5 border border-black/10 shadow-sm active:scale-95 transition-transform duration-200 focus:outline-none"
+                    className="relative flex h-11 w-11 items-center justify-center rounded-xl border border-black/10 bg-black/5 shadow-sm transition-transform duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#B3261E] active:scale-95 md:hidden"
                     aria-label="Toggle menu"
+                    aria-expanded={menuOpen}
+                    aria-controls="mobile-nav"
                 >
                     <span className="sr-only">{menuOpen ? 'Close menu' : 'Open menu'}</span>
                     <svg
@@ -68,14 +70,14 @@ function Header() {
             </div>
 
             {menuOpen && (
-                <nav className="md:hidden absolute left-0 right-0 top-full mt-3">
+                <nav id="mobile-nav" className="absolute top-full right-0 left-0 mt-3 md:hidden">
                     <div className="refractive-header rounded-2xl py-3 px-4 flex flex-col space-y-1.5 shadow-xl animate-fade-in">
                         {links.map((link) => (
                             <a
                                 key={link.href}
                                 href={link.href}
                                 onClick={toggleMenu}
-                                className="nav-link text-base py-1.5 px-3 rounded-lg hover:bg-black/5 transition-colors"
+                                className="nav-link rounded-lg px-3 py-2 text-base transition-colors hover:bg-black/5"
                             >
                                 {link.label}
                             </a>
