@@ -75,52 +75,6 @@ body {
     animation: fadeIn 0.3s ease-out;
 }
 
-@keyframes scrollLeft {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(-50%);
-    }
-}
-
-@keyframes scrollRight {
-    0% {
-        transform: translateX(-50%);
-    }
-
-    100% {
-        transform: translateX(0);
-    }
-}
-
-.animate-scroll-left {
-    animation: scrollLeft 30s linear infinite;
-}
-
-.animate-scroll-right {
-    animation: scrollRight 30s linear infinite;
-}
-
-@keyframes softPulse {
-
-    0%,
-    100% {
-        transform: scale(1);
-        opacity: 0.25;
-    }
-
-    50% {
-        transform: scale(1.05);
-        opacity: 0.35;
-    }
-}
-
-.animate-soft-pulse {
-    animation: softPulse 8s ease-in-out infinite;
-}
-
 @keyframes blink {
 
     0%,
@@ -140,18 +94,6 @@ body {
 .noise-texture {
     background-image: radial-gradient(rgba(20, 20, 20, 0.06) 1px, transparent 1px);
     background-size: 3px 3px;
-}
-
-@keyframes float {
-
-    0%,
-    100% {
-        transform: translateY(0px);
-    }
-
-    50% {
-        transform: translateY(-4px);
-    }
 }
 
 /* Scroll reveal */

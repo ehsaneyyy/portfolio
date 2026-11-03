@@ -23,7 +23,6 @@ My projects cover areas such as SaaS applications, business management systems, 
 * CSS
 * Tailwind CSS
 * Vite
-* Three.js
 
 ### Backend & APIs
 
@@ -78,7 +77,7 @@ A FastAPI-based study management backend for creating study plans and managing t
 
 This portfolio website itself, built with React and Vite.
 
-**Technologies:** React, Vite, Tailwind CSS, Three.js
+**Technologies:** React, Vite, Tailwind CSS
 
 ## What I Work With
 

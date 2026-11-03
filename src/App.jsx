@@ -10,7 +10,7 @@ import './index.css'
 
 function App() {
   return (
-    <div className="flex flex-col min-h-screen bg-[#F7F4EF] overflow-x-hidden select-none">
+    <div className="flex flex-col min-h-screen overflow-x-hidden bg-[#F7F4EF]">
       <Header />
       <main>
         <Hero />
