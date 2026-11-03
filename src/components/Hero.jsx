@@ -1,135 +1,52 @@
-import { useState, useRef, useEffect } from 'react'
-
 function Hero() {
-    const containerRef = useRef(null)
-    const targetRef = useRef({ x: 0, y: 0 })
-    const currentRef = useRef({ x: 0, y: 0 })
-    const autoAngleRef = useRef(0)
-    const rafRef = useRef(null)
-    const initializedRef = useRef(false)
-    const [mouseInside, setMouseInside] = useState(false)
-
-    const [pos, setPos] = useState({ x: 0, y: 0 })
-    const [time, setTime] = useState(0)
-
-    const baseRadius = 90
-    const feather = 30
-
-    useEffect(() => {
-        const rect = containerRef.current?.getBoundingClientRect()
-        if (rect) {
-            const cx = rect.width / 2
-            const cy = rect.height / 2 + 20
-            targetRef.current = { x: cx, y: cy }
-            currentRef.current = { x: cx, y: cy }
-            setPos({ x: cx, y: cy })
-            initializedRef.current = true
-        }
-    }, [])
-
-    useEffect(() => {
-        const animate = () => {
-            if (!initializedRef.current) {
-                rafRef.current = requestAnimationFrame(animate)
-                return
-            }
-
-            const rect = containerRef.current?.getBoundingClientRect()
-            if (!rect) {
-                rafRef.current = requestAnimationFrame(animate)
-                return
-            }
-
-            if (!mouseInside) {
-                autoAngleRef.current += 0.008
-                const cx = rect.width / 2
-                const cy = rect.height / 2 + 20
-                targetRef.current = {
-                    x: cx + Math.cos(autoAngleRef.current) * 90,
-                    y: cy + Math.sin(autoAngleRef.current * 1.7) * 70,
-                }
-            }
-
-            currentRef.current.x += (targetRef.current.x - currentRef.current.x) * 0.07
-            currentRef.current.y += (targetRef.current.y - currentRef.current.y) * 0.07
-            setPos({ x: currentRef.current.x, y: currentRef.current.y })
-            setTime(Date.now() / 1000)
-
-            rafRef.current = requestAnimationFrame(animate)
-        }
-        rafRef.current = requestAnimationFrame(animate)
-        return () => cancelAnimationFrame(rafRef.current)
-    }, [mouseInside])
-
-    const handleMouseMove = (e) => {
-        const rect = containerRef.current?.getBoundingClientRect()
-        if (!rect) return
-        targetRef.current = {
-            x: e.clientX - rect.left,
-            y: e.clientY - rect.top,
-        }
-    }
-
-    const handleMouseEnter = () => setMouseInside(true)
-    const handleMouseLeave = () => setMouseInside(false)
-
-    const t = time
-    const offset1 = { x: Math.sin(t * 1.7) * 25, y: Math.cos(t * 2.1) * 30 }
-    const offset2 = { x: Math.cos(t * 2.3) * 20, y: Math.sin(t * 1.9) * 35 }
-    const r1 = baseRadius + Math.sin(t * 2.5) * 15
-    const r2 = baseRadius * 1.3 + Math.cos(t * 2.8) * 20
-    const f1 = feather + Math.sin(t * 3.1) * 10
-    const f2 = feather + Math.cos(t * 3.4) * 12
-
-    const peterMask = [
-        `radial-gradient(ellipse ${r1}px ${r1 * 1.2}px at ${pos.x + offset1.x}px ${pos.y + offset1.y}px, transparent ${Math.max(0, r1 - f1)}px, black ${r1}px)`,
-        `radial-gradient(ellipse ${r2}px ${r2 * 0.9}px at ${pos.x + offset2.x}px ${pos.y + offset2.y}px, transparent ${Math.max(0, r2 - f2)}px, black ${r2}px)`,
-    ].join(', ')
-
-    const spideyMask = [
-        `radial-gradient(ellipse ${r1}px ${r1 * 1.2}px at ${pos.x + offset1.x}px ${pos.y + offset1.y}px, black ${Math.max(0, r1 - f1)}px, transparent ${r1}px)`,
-        `radial-gradient(ellipse ${r2}px ${r2 * 0.9}px at ${pos.x + offset2.x}px ${pos.y + offset2.y}px, black ${Math.max(0, r2 - f2)}px, transparent ${r2}px)`,
-    ].join(', ')
-
     return (
-        <section id="home" className="relative h-screen pt-24 overflow-hidden bg-[#F7F4EF]">
-            <div
-                className="absolute top-24 left-0 right-0 bottom-0 overflow-hidden pointer-events-none z-10"
-                style={{
-                    maskImage: peterMask,
-                    WebkitMaskImage: peterMask,
-                }}
-            >
-                <img
-                    src="/peter1.png"
-                    alt="Peter Parker"
-                    className="absolute inset-0 w-full h-full object-cover object-top"
-                />
+        <section id="home" className="relative flex min-h-svh items-center bg-[#F7F4EF] px-4 pt-28 pb-16 sm:px-6 sm:pt-32">
+            <div className="mx-auto grid w-full max-w-6xl items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
+                <div className="max-w-xl text-center lg:text-left">
+                    <p
+                        className="text-xs font-medium uppercase tracking-[0.2em] text-[#B3261E] sm:text-sm"
+                        style={{ fontFamily: "'JetBrains Mono', monospace" }}
+                    >
+                        Junior Python Full-Stack Developer
+                    </p>
+
+                    <h1 className="mt-4 text-4xl font-bold tracking-tight text-black sm:text-5xl lg:text-6xl">
+                        Mohammed <span className="text-[#B3261E]">Ehsan</span>
+                    </h1>
+
+                    <p className="mt-5 text-base leading-relaxed text-black/65 sm:text-lg">
+                        I build clean, responsive web applications with Django REST Framework, React, and Tailwind CSS.
+                    </p>
+
+                    <div className="mt-8 flex flex-wrap items-center justify-center gap-3 lg:justify-start">
+                        <a
+                            href="#projects"
+                            className="inline-flex items-center justify-center rounded-full bg-[#141414] px-6 py-3 text-sm font-medium text-[#F7F4EF] transition-colors duration-200 hover:bg-[#B3261E] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#B3261E]"
+                        >
+                            View Projects
+                        </a>
+                        <a
+                            href="/resume.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center justify-center rounded-full border border-black/15 bg-white px-6 py-3 text-sm font-medium text-black transition-colors duration-200 hover:border-[#B3261E] hover:text-[#B3261E] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#B3261E]"
+                        >
+                            Download CV
+                        </a>
+                    </div>
+                </div>
+
+                <div className="mx-auto w-full max-w-xs sm:max-w-sm lg:max-w-md">
+                    <div className="flex aspect-[4/5] items-center justify-center overflow-hidden rounded-2xl border border-black/10 bg-white p-8 text-center shadow-[0_1px_0_rgba(20,20,20,0.08),0_20px_40px_-24px_rgba(20,20,20,0.15)]">
+                        <div>
+                            <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-full border border-[#B3261E]/20 bg-[#F7F4EF] text-base font-bold text-[#B3261E]">
+                                ME
+                            </span>
+                            <p className="mt-4 text-sm text-black/40">Portrait coming soon</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <div
-                className="absolute top-24 left-0 right-0 bottom-0 overflow-hidden pointer-events-none z-30"
-                style={{
-                    maskImage: spideyMask,
-                    WebkitMaskImage: spideyMask,
-                }}
-            >
-                <img
-                    src="/spidey1.png"
-                    alt="Spiderman"
-                    className="absolute inset-0 w-full h-full object-cover object-top"
-                />
-            </div>
-
-            <div className="absolute bottom-0 left-0 right-0 h-16 bg-linear-to-t from-[#F7F4EF] to-transparent pointer-events-none z-40" />
-
-            <div
-                ref={containerRef}
-                className="absolute top-24 left-0 right-0 bottom-0 z-50"
-                onMouseMove={handleMouseMove}
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-            />
         </section>
     )
 }
