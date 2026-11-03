@@ -1,6 +1,6 @@
 function Hero() {
     return (
-        <section id="home" className="relative flex min-h-svh items-center bg-[#F7F4EF] px-4 pt-28 pb-16 sm:px-6 sm:pt-32">
+        <section id="home" aria-labelledby="hero-title" className="relative flex min-h-svh items-center bg-[#F7F4EF] px-4 pt-28 pb-16 sm:px-6 sm:pt-32">
             <div className="mx-auto grid w-full max-w-6xl items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
                 <div className="max-w-xl text-center lg:text-left">
                     <p
@@ -10,7 +10,7 @@ function Hero() {
                         Junior Python Full-Stack Developer
                     </p>
 
-                    <h1 className="mt-4 text-4xl font-bold tracking-tight text-black sm:text-5xl lg:text-6xl">
+                    <h1 id="hero-title" className="mt-4 text-4xl font-bold tracking-tight text-black sm:text-5xl lg:text-6xl">
                         Mohammed <span className="text-[#B3261E]">Ehsan</span>
                     </h1>
 
@@ -37,13 +37,26 @@ function Hero() {
                 </div>
 
                 <div className="mx-auto w-full max-w-xs sm:max-w-sm lg:max-w-md">
-                    <div className="flex aspect-[4/5] items-center justify-center overflow-hidden rounded-2xl border border-black/10 bg-white p-8 text-center shadow-[0_1px_0_rgba(20,20,20,0.08),0_20px_40px_-24px_rgba(20,20,20,0.15)]">
-                        <div>
-                            <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-full border border-[#B3261E]/20 bg-[#F7F4EF] text-base font-bold text-[#B3261E]">
-                                ME
-                            </span>
-                            <p className="mt-4 text-sm text-black/40">Portrait coming soon</p>
-                        </div>
+                    <div className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-[0_1px_0_rgba(20,20,20,0.08),0_20px_40px_-24px_rgba(20,20,20,0.15)]">
+                        <picture>
+                            <source
+                                type="image/webp"
+                                srcSet="/mohammed-ehsan-coding-512.webp 512w, /mohammed-ehsan-coding-1024.webp 1024w"
+                                sizes="(min-width: 1024px) 448px, (min-width: 640px) 384px, 320px"
+                            />
+                            <img
+                                src="/mohammed-ehsan-coding-1024.jpg"
+                                srcSet="/mohammed-ehsan-coding-512.jpg 512w, /mohammed-ehsan-coding-1024.jpg 1024w"
+                                sizes="(min-width: 1024px) 448px, (min-width: 640px) 384px, 320px"
+                                alt="Mohammed Ehsan coding on a laptop"
+                                width="1024"
+                                height="1024"
+                                loading="eager"
+                                fetchPriority="high"
+                                decoding="async"
+                                className="aspect-square h-auto w-full object-cover"
+                            />
+                        </picture>
                     </div>
                 </div>
             </div>

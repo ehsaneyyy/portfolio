@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mohammedehsan.dpdns.org/
+Sitemap: https://mohammedehsan.dpdns.org/sitemap.xml

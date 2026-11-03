@@ -12,12 +12,14 @@ function App() {
   return (
     <div className="flex flex-col min-h-screen bg-[#F7F4EF] overflow-x-hidden select-none">
       <Header />
-      <Hero />
-      <About /> 
-      <Projects />
-      <Skills />
-      <Certifications />
-      <Contact />
+      <main>
+        <Hero />
+        <About />
+        <Projects />
+        <Skills />
+        <Certifications />
+        <Contact />
+      </main>
       <Footer />
     </div>
   )
